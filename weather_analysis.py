@@ -12,8 +12,6 @@ def load_weather_data(filepath):
 def plot_temperature_trends(data, save_path="temperature_trends.png"):
     pass
 
-def hello():
-    #this func does nothing
 
 
 def plot_precipitation_and_humidity(data, save_path="precip_humidity.png"):
