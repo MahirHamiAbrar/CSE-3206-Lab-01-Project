@@ -13,6 +13,7 @@ def plot_temperature_trends(data, save_path="temperature_trends.png"):
     pass
 
 
+
 def plot_precipitation_and_humidity(data, save_path="precip_humidity.png"):
     """ Plot daily precipitation (bar) and mean humidity (line, secondary axis). """
     daily = data["daily"]
@@ -46,6 +47,9 @@ def main():
     data = load_weather_data(filepath)
     plot_temperature_trends(data)
     plot_precipitation_and_humidity(data)
+
+def hello():
+    print("Experimenting")
 
 
 if __name__ == "__main__":
