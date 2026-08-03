@@ -14,7 +14,13 @@ git clone https://github.com/MahirHamiAbrar/CSE-3206-Lab-01-Project.git
 pip install -r requirements.txt
 ```
 
-### 3. Run
+### 3. Download dataset
+
+```bash
+python download_dataset.py
+```
+
+### 4. Run
 
 ```bash
 python weather_analysis.py
