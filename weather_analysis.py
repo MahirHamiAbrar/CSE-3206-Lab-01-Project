@@ -64,11 +64,12 @@ def plot_precipitation_and_humidity(data, save_path="precip_humidity.png"):
 def main():
     filepath = "dataset.json"
     data = load_weather_data(filepath)
+    #does adding comments create merge conflict?
     plot_temperature_trends(data)
     plot_precipitation_and_humidity(data)
 
 def hello():
-    print("Experimenting")
+    print("Hello from branch_test")
 
 
 if __name__ == "__main__":
