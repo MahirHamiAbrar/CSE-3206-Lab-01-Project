@@ -50,7 +50,7 @@ def main():
     plot_precipitation_and_humidity(data)
 
 def hello():
-    print("Hello from branch_test")
+    print("Hello from conflict")
 
 
 if __name__ == "__main__":
