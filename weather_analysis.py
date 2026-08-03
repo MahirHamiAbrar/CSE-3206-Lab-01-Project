@@ -45,7 +45,7 @@ def plot_precipitation_and_humidity(data, save_path="precip_humidity.png"):
 def main():
     filepath = "dataset.json"
     data = load_weather_data(filepath)
-    plot_temperature_trends(data)
+    plot_temperature_trends(data, save_path="temperature_trends_conflict_source.png")
     plot_precipitation_and_humidity(data)
 
 
