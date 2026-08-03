@@ -10,7 +10,26 @@ def load_weather_data(filepath):
 
 
 def plot_temperature_trends(data, save_path="temperature_trends.png"):
-    pass
+    """ Plot daily max and min temperature over time. """
+    daily = data["daily"]
+    dates = daily["time"]
+    temp_max = daily["temperature_2m_max"]
+    temp_min = daily["temperature_2m_min"]
+ 
+    plt.figure(figsize=(12, 5))
+    plt.plot(dates, temp_max, label="Max Temp (°C)", color="tab:red")
+    plt.plot(dates, temp_min, label="Min Temp (°C)", color="tab:blue")
+    plt.fill_between(dates, temp_min, temp_max, color="gray", alpha=0.15)
+ 
+    plt.title(f"Daily Temperature Range — {data.get('location_name', 'Unknown location')}")
+    plt.xlabel("Date")
+    plt.ylabel("Temperature (°C)")
+    plt.xticks(rotation=45, fontsize=7)
+    plt.legend()
+    plt.tight_layout()
+    plt.savefig(save_path, dpi=150)
+    plt.close()
+    print(f"Saved: {save_path}")
 
 
 def plot_precipitation_and_humidity(data, save_path="precip_humidity.png"):
